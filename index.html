@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Steffy Aavlin Raj F S | Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg-dark: #0b1120;
+  --card-dark: #1e293b;
+  --text-dark: #e2e8f0;
+  --accent-dark: #60a5fa;
+  --bg-light: #f9fafb;
+  --card-light: #ffffff;
+  --text-light: #111827;
+  --accent-light: #2563eb;
+  --radius: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-dark);
+  transition: all 0.5s ease;
+}
+
+body.light {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background: rgba(15,23,42,0.9);
+  backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  z-index: 100;
+}
+
+header h1 {
+  font-size: 22px;
+  color: var(--accent-dark);
+}
+
+nav a {
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: 0.3s;
+}
+nav a:hover {
+  color: var(--accent-dark);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  color: var(--accent-dark);
+}
+
+section {
+  padding: 100px 60px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+#home {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 100vh;
+  animation: fadeIn 2s ease-in;
+}
+
+#home img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--accent-dark);
+  box-shadow: 0 5px 25px rgba(0,0,0,0.5);
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-10px);}
+}
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+#home h2 {
+  font-size: 36px;
+  margin-top: 20px;
+}
+#home h3 {
+  font-weight: 400;
+  color: #94a3b8;
+}
+
+h2.section-title {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: var(--accent-dark);
+  animation: fadeIn 1.5s ease-in;
+}
+
+.card {
+  background: var(--card-dark);
+  border-radius: var(--radius);
+  padding: 25px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(96,165,250,0.3);
+}
+
+.skills-list, .activities-list, .strengths-list, .learning-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tag {
+  background: var(--accent-dark);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 30px;
+  font-size: 14px;
+  transition: transform 0.3s;
+}
+.tag:hover {
+  transform: scale(1.1);
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: var(--card-dark);
+  color: gray;
+  box-shadow: 0 -5px 10px rgba(0,0,0,0.3);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Steffy Aavlin Raj F S</h1>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#activities">Activities</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="theme-toggle" id="theme-toggle">☀️</button>
+</header>
+
+<section id="home">
+  <div>
+    <img src="steffy.jpg" alt="Steffy Aavlin Raj">
+    <h2>Hi, I'm <span style="color:#60a5fa;">Steffy Aavlin Raj F S</span></h2>
+    <h3>Bachelor of Engineering | Computer Science Engineering<br>Saveetha Engineering College</h3>
+  </div>
+</section>
+
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <div class="card">
+    <p>
+      I’m a passionate and enthusiastic Computer Science Engineering student from Saveetha Engineering College. 
+      I love solving problems, learning new technologies, and building creative digital solutions. 
+      My interests include Machine Learning, Data Science, Networking, and Web Development. 
+      I’m always eager to learn and improve my skills through real-world experiences.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="section-title">Skills</h2>
+  <div class="card">
+    <h3>Technical Skills</h3>
+    <div class="skills-list">
+      <span class="tag">Java</span>
+      <span class="tag">C Programming</span>
+      <span class="tag">Python</span>
+      <span class="tag">SQL</span>
+      <span class="tag">HTML</span>
+      <span class="tag">CSS</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">Django</span>
+      <span class="tag">Machine Learning</span>
+      <span class="tag">Data Science</span>
+      <span class="tag">Networking</span>
+      <span class="tag">Web Development</span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>Currently Learning</h3>
+    <div class="learning-list">
+      <span class="tag">Data Structures</span>
+      <span class="tag">SQL</span>
+      <span class="tag">HTML</span>
+      <span class="tag">JavaScript</span>
+      <span class="tag">CSS</span>
+      <span class="tag">Django</span>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <h2 class="section-title">Education</h2>
+  <div class="card">
+    <p><b>Bachelor of Engineering (B.E)</b><br>Computer Science Engineering<br>Saveetha Engineering College</p>
+    <p><b>Higher Secondary (2023–2024):</b><br>C.K. School of Practical Knowledge, Cuddalore</p>
+  </div>
+</section>
+
+<section id="activities">
+  <h2 class="section-title">Activities & Achievements</h2>
+  <div class="card">
+    <ul>
+      <li>Participated in <b>IBM Datathon</b> Hackathon</li>
+      <li>Engaged in group discussions and paper presentations</li>
+      <li>Attended <b>Autodesk Fusion Workshop</b></li>
+    </ul>
+  </div>
+</section>
+
+<section id="strengths">
+  <h2 class="section-title">My Strengths</h2>
+  <div class="card">
+    <div class="strengths-list">
+      <span class="tag">Handle Work Pressure</span>
+      <span class="tag">Good Listener</span>
+      <span class="tag">Fast Learner</span>
+      <span class="tag">Leadership</span>
+      <span class="tag">Punctuality</span>
+      <span class="tag">Sincerity</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2 class="section-title">Contact</h2>
+  <div class="card" style="text-align:center;">
+    <p>Email: <a href="mailto:steffyfranklin07@gmail.com" style="color:#60a5fa;">steffyfranklin07@gmail.com</a></p>
+  </div>
+</section>
+
+<footer>
+  © 2025 Steffy Aavlin Raj F S | Computer Science Engineering
+</footer>
+
+<script>
+const toggleBtn = document.getElementById('theme-toggle');
+toggleBtn.addEventListener('click', () => {
+  document.body.classList.toggle('light');
+  toggleBtn.textContent = document.body.classList.contains('light') ? '🌙' : '☀️';
+});
+</script>
+
+</body>
+</html>
